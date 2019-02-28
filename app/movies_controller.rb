@@ -1,10 +1,3 @@
-# Replace the '__' in the below methods to to make the specs pass!
-# Each '__' corresponds to a single line of code you will need to write.
-# See the example below on the left and how it should look on the right.
-# def make_a_new_movie_instance    # def make_a_new_movie_instance
-#   movie = __                     #   movie = Movie.new
-# end                              # end
-
 def can_be_instantiated_and_then_saved
   movie = Movie.new
   movie.title = "This is a title."
@@ -21,9 +14,10 @@ def can_be_created_with_a_hash_of_attributes
   }
   movie = Movie.new(attributes)
   movie.save
+  movie
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(title = "Home Alone", release_date = 1990)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
